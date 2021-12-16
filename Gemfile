@@ -9,18 +9,18 @@ gemspec
 # We need a newish Rake since Active Job sets its test tasks' descriptions.
 gem "rake", ">= 11.1"
 
-gem "sprockets-rails", ">= 2.0.0"
+gem "sprockets-rails", ">= 3.2.2"
 gem "propshaft", ">= 0.1.7"
 gem "capybara", ">= 3.26"
 gem "selenium-webdriver", ">= 4.0.0"
 
 gem "rack-cache", "~> 1.2"
-gem "stimulus-rails"
-gem "turbo-rails"
-gem "jsbundling-rails"
-gem "cssbundling-rails"
-gem "importmap-rails"
-gem "tailwindcss-rails"
+gem "stimulus-rails", ">= 0.5.4"
+gem "turbo-rails", ">= 0.7.14"
+gem "jsbundling-rails", ">= 0.1.7"
+gem "cssbundling-rails", ">= 0.2.2"
+gem "importmap-rails", ">= 0.7.3"
+gem "tailwindcss-rails", ">= 0.4.3"
 # require: false so bcrypt is loaded only when has_secure_password is used.
 # This is to avoid Active Model (and by extension the entire framework)
 # being dependent on a binary library.
