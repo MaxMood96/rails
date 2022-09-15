@@ -79,7 +79,7 @@ end
 
 # Action Cable
 group :cable do
-  gem "puma", require: false
+  gem "puma", ">= 5.6.4", require: false
 
   gem "redis", ">= 4.0.1", require: false
 
