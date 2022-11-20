@@ -53,7 +53,7 @@ group :doc do
 end
 
 # Active Support
-gem "dalli", ">= 3.0.1"
+gem "dalli", ">= 3.2.3"
 gem "listen", "~> 3.3", require: false
 gem "libxml-ruby", platforms: :ruby
 gem "connection_pool", require: false
