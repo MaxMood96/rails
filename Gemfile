@@ -79,7 +79,7 @@ gem "readline-ext", require: false
 
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 2.0") # Change to ~> 3 after #46594 is merged.
-gem "rack", rack_version
+gem "rack", ">= 3.0.0", rack_version
 
 # Active Job
 group :job do
