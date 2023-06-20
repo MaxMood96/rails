@@ -12,7 +12,7 @@ end
 # We need a newish Rake since Active Job sets its test tasks' descriptions.
 gem "rake", ">= 13"
 
-gem "sprockets-rails", ">= 2.0.0"
+gem "sprockets-rails", ">= 3.4.2"
 gem "propshaft", ">= 0.1.7"
 gem "capybara", ">= 3.38"
 gem "selenium-webdriver", ">= 4.0.0"
