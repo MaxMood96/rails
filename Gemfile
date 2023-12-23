@@ -82,8 +82,8 @@ gem "rack", rack_version
 
 # Active Job
 group :job do
-  gem "resque", require: false
-  gem "resque-scheduler", require: false
+  gem "resque", ">= 2.6.0", require: false
+  gem "resque-scheduler", ">= 4.10.2", require: false
   gem "sidekiq", require: false
   gem "sucker_punch", require: false
   gem "delayed_job", require: false
