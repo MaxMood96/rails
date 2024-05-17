@@ -15,7 +15,7 @@ gem "rake", ">= 13"
 gem "sprockets-rails", ">= 2.0.0"
 gem "propshaft", ">= 0.1.7"
 gem "capybara", ">= 3.38"
-gem "selenium-webdriver", ">= 4.0.0"
+gem "selenium-webdriver", ">= 4.8.0"
 
 gem "rack-cache", "~> 1.2"
 gem "stimulus-rails"
@@ -41,16 +41,16 @@ gem "json", ">= 2.0.0"
 gem "cgi", ">= 0.3.6", require: false
 
 group :rubocop do
-  gem "rubocop", ">= 1.25.1", require: false
-  gem "rubocop-minitest", require: false
+  gem "rubocop", ">= 1.49.0", require: false
+  gem "rubocop-minitest", ">= 0.30.0", require: false
   gem "rubocop-packaging", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-md", require: false
+  gem "rubocop-performance", ">= 1.17.0", require: false
+  gem "rubocop-rails", ">= 2.19.0", require: false
+  gem "rubocop-md", ">= 1.2.1", require: false
 end
 
 group :mdl do
-  gem "mdl", require: false
+  gem "mdl", ">= 0.13.0", require: false
 end
 
 group :doc do
@@ -67,7 +67,7 @@ gem "dalli", ">= 3.0.1"
 gem "listen", "~> 3.3", require: false
 gem "libxml-ruby", platforms: :ruby
 gem "connection_pool", require: false
-gem "rexml", require: false
+gem "rexml", ">= 3.2.7", require: false
 gem "msgpack", ">= 1.7.0", require: false
 
 # for railties
@@ -107,7 +107,7 @@ end
 # Active Storage
 group :storage do
   gem "aws-sdk-s3", require: false
-  gem "google-cloud-storage", "~> 1.11", require: false
+  gem "google-cloud-storage", "~> 1.45", ">= 1.45.0", require: false
   gem "azure-storage-blob", "~> 2.0", require: false
 
   gem "image_processing", "~> 1.2"
@@ -115,10 +115,10 @@ end
 
 # Action Mailbox
 gem "aws-sdk-sns", require: false
-gem "webmock"
+gem "webmock", ">= 3.19.0"
 
 group :ujs do
-  gem "webdrivers"
+  gem "webdrivers", ">= 5.3.0"
 end
 
 # Add your own local bundler stuff.
