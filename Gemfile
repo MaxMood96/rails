@@ -85,7 +85,7 @@ gem "msgpack", ">= 1.7.0", require: false
 
 # for railties
 gem "bootsnap", ">= 1.4.4", require: false
-gem "webrick", require: false
+gem "webrick", ">= 1.8.2", require: false
 gem "jbuilder", require: false
 gem "web-console", require: false
 
