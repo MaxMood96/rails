@@ -1,9 +1,38 @@
+*   Fix incorrect SQL query when passing an empty hash to `ActiveRecord::Base.insert`.
+
+    *David Stosik*
+
+*   Allow to save records with polymorphic join tables that have inverse of specified.
+
+    *Markus Doits*
+
+*   Fix association scopes applying on the incorrect join when using a polymorphic `has_many through:`.
+
+    *Joshua Young*
+
+*   Allow `ActiveRecord::Base#pluck` to accept hash arguments with symbol and string values.
+
+    ```ruby
+    Post.joins(:comments).pluck(:id, comments: :id)
+    Post.joins(:comments).pluck("id", "comments" => "id")
+    ```
+
+    *Joshua Young*
+
+*   Make Float distinguish between `float4` and `float8` in PostgreSQL.
+
+    Fixes #52742
+
+    *Ryota Kitazawa*, *Takayuki Nagatomi*
+
+## Rails 8.0.0.beta1 (September 26, 2024) ##
+
 *   Allow `drop_table` to accept an array of table names.
 
     This will let you to drop multiple tables in a single call.
 
     ```ruby
-    ActiveRecord::Base.connection.drop_table(:users, :posts)
+    ActiveRecord::Base.lease_connection.drop_table(:users, :posts)
     ```
 
     *Gabriel Sobrinho*
