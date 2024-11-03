@@ -53,7 +53,7 @@ group :lint do
 end
 
 group :rubocop do
-  gem "rubocop", ">= 1.25.1", require: false
+  gem "rubocop", ">= 1.66.0", require: false
   gem "rubocop-minitest", require: false
   gem "rubocop-packaging", require: false
   gem "rubocop-performance", require: false
@@ -82,7 +82,7 @@ gem "dalli", ">= 3.0.1"
 gem "listen", "~> 3.3", require: false
 gem "libxml-ruby", platforms: :ruby
 gem "connection_pool", require: false
-gem "rexml", require: false
+gem "rexml", ">= 3.3.9", require: false
 gem "msgpack", ">= 1.7.0", require: false
 
 # for railties
