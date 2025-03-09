@@ -17,7 +17,7 @@ gem "selenium-webdriver", ">= 4.20.0"
 
 gem "rack-cache", "~> 1.2"
 gem "stimulus-rails"
-gem "turbo-rails"
+gem "turbo-rails", ">= 2.0.8"
 gem "jsbundling-rails"
 gem "cssbundling-rails"
 gem "importmap-rails", ">= 1.2.3"
@@ -25,7 +25,7 @@ gem "tailwindcss-rails"
 gem "dartsass-rails"
 gem "solid_cache"
 gem "solid_queue"
-gem "solid_cable"
+gem "solid_cable", ">= 3.0.0"
 gem "kamal", ">= 2.0.0.rc2", require: false
 gem "thruster", require: false
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -41,10 +41,10 @@ gem "terser", ">= 1.1.4", require: false
 gem "json", ">= 2.0.0", "!=2.7.0"
 
 # Workaround until Ruby ships with cgi version 0.3.6 or higher.
-gem "cgi", ">= 0.3.6", require: false
+gem "cgi", ">= 0.4.2", require: false
 
 # Workaround until all supported Ruby versions ship with uri version 0.13.1 or higher.
-gem "uri", ">= 0.13.1", require: false
+gem "uri", ">= 0.13.2", require: false
 
 gem "prism"
 
@@ -94,9 +94,9 @@ gem "web-console", require: false
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 3.0")
 if rack_version != "head"
-  gem "rack", rack_version
+  gem "rack", ">= 3.1.11", rack_version
 else
-  gem "rack", git: "https://github.com/rack/rack.git", branch: "main"
+  gem "rack", ">= 3.1.11", git: "https://github.com/rack/rack.git", branch: "main"
 end
 
 gem "useragent", require: false
