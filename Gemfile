@@ -25,7 +25,7 @@ gem "tailwindcss-rails"
 gem "dartsass-rails"
 gem "solid_cache"
 gem "solid_queue"
-gem "solid_cable"
+gem "solid_cable", ">= 3.0.0"
 gem "kamal", ">= 2.0.0.rc2", require: false
 gem "thruster", require: false
 # require: false so bcrypt is loaded only when has_secure_password is used.
@@ -94,9 +94,9 @@ gem "web-console", require: false
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 3.0")
 if rack_version != "head"
-  gem "rack", rack_version
+  gem "rack", ">= 3.1.12", rack_version
 else
-  gem "rack", git: "https://github.com/rack/rack.git", branch: "main"
+  gem "rack", ">= 3.1.12", git: "https://github.com/rack/rack.git", branch: "main"
 end
 
 gem "useragent", require: false
