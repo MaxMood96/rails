@@ -11,22 +11,22 @@ gem "rake", ">= 13"
 gem "releaser", path: "tools/releaser"
 
 gem "sprockets-rails", ">= 2.0.0", require: false
-gem "propshaft", ">= 0.1.7"
-gem "capybara", ">= 3.39"
-gem "selenium-webdriver", ">= 4.20.0"
+gem "propshaft", ">= 0.9.1"
+gem "capybara", ">= 3.40.0"
+gem "selenium-webdriver", ">= 4.23.0"
 
-gem "rack-cache", "~> 1.2"
-gem "stimulus-rails"
-gem "turbo-rails"
-gem "jsbundling-rails"
-gem "cssbundling-rails"
-gem "importmap-rails", ">= 1.2.3"
-gem "tailwindcss-rails"
-gem "dartsass-rails"
-gem "solid_cache"
-gem "solid_queue"
-gem "solid_cable"
-gem "kamal", ">= 2.0.0.rc2", require: false
+gem "rack-cache", "~> 1.16", ">= 1.16.0"
+gem "stimulus-rails", ">= 1.3.1"
+gem "turbo-rails", ">= 2.0.8"
+gem "jsbundling-rails", ">= 1.2.2"
+gem "cssbundling-rails", ">= 1.4.0"
+gem "importmap-rails", ">= 2.0.0"
+gem "tailwindcss-rails", ">= 2.1.0"
+gem "dartsass-rails", ">= 0.5.1"
+gem "solid_cache", ">= 1.0.5"
+gem "solid_queue", ">= 0.8.2"
+gem "solid_cable", ">= 3.0.0"
+gem "kamal", ">= 2.0.0", require: false
 gem "thruster", require: false
 # require: false so bcrypt is loaded only when has_secure_password is used.
 # This is to avoid Active Model (and by extension the entire framework)
@@ -57,15 +57,15 @@ group :rubocop do
   gem "rubocop-minitest", require: false
   gem "rubocop-packaging", require: false
   gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
+  gem "rubocop-rails", ">= 2.24.0", require: false
   gem "rubocop-md", require: false
 
   # This gem is used in Railties tests so it must be a development dependency.
-  gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rails-omakase", ">= 1.1.0", require: false
 end
 
 group :mdl do
-  gem "mdl", "!= 0.13.0", require: false
+  gem "mdl", ">= 0.13.0", require: false
 end
 
 group :doc do
@@ -88,29 +88,29 @@ gem "msgpack", ">= 1.7.0", require: false
 # for railties
 gem "bootsnap", ">= 1.4.4", require: false
 gem "webrick", require: false
-gem "jbuilder", require: false
+gem "jbuilder", ">= 2.12.0", require: false
 gem "web-console", require: false
 
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 3.0")
 if rack_version != "head"
-  gem "rack", rack_version
+  gem "rack", ">= 3.1.16", rack_version
 else
-  gem "rack", git: "https://github.com/rack/rack.git", branch: "main"
+  gem "rack", ">= 3.1.16", git: "https://github.com/rack/rack.git", branch: "main"
 end
 
 gem "useragent", require: false
 
 # Active Job
 group :job do
-  gem "resque", require: false
-  gem "resque-scheduler", require: false
-  gem "sidekiq", require: false
-  gem "delayed_job", require: false
+  gem "resque", ">= 2.7.0", require: false
+  gem "resque-scheduler", ">= 4.11.0", require: false
+  gem "sidekiq", ">= 7.2.1", require: false
+  gem "delayed_job", ">= 4.1.13", require: false
   gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
   gem "sneakers", require: false
   gem "backburner", require: false
-  gem "delayed_job_active_record", require: false
+  gem "delayed_job_active_record", ">= 4.1.11", require: false
 end
 
 # Action Cable
@@ -127,7 +127,7 @@ end
 # Active Storage
 group :storage do
   gem "aws-sdk-s3", require: false
-  gem "google-cloud-storage", "~> 1.11", require: false
+  gem "google-cloud-storage", "~> 1.46", ">= 1.46.0", require: false
   gem "azure-storage-blob", "~> 2.0", require: false
 
   gem "image_processing", "~> 1.2"
@@ -135,7 +135,7 @@ end
 
 # Action Mailbox
 gem "aws-sdk-sns", require: false
-gem "webmock"
+gem "webmock", ">= 3.20.0"
 gem "httpclient", github: "nahi/httpclient", branch: "master", require: false
 
 # Add your own local bundler stuff.
