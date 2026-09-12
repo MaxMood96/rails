@@ -74,7 +74,7 @@ gem "redis-client", ">= 0.28.0"
 gem "listen", "~> 3.3", require: false
 gem "libxml-ruby", platforms: :ruby
 gem "connection_pool", require: false
-gem "rexml", require: false
+gem "rexml", ">= 3.3.3", require: false
 gem "msgpack", ">= 1.7.0", require: false
 
 # for railties
